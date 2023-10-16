@@ -13,3 +13,5 @@ $JAVA_HOME/bin/java -jar {soap-ui-jar_name}
 JDK version : 11.0.17
 
 SOAP-UI SDK version : 5.7.0
+
+Linux Version : Oracle Linux 7.9
