@@ -1,0 +1,18 @@
+[Unit]
+Description=Service to maintain soap mockservices running in background
+
+[Service]
+SuccessExitStatus=143
+
+User=root
+Group=root
+
+Type=simple
+
+Environment=SOAP_PROJECTS={Path_to_soap-ui-projects_directory}
+WorkingDirectory={Path_to_soap-ui-jar_directory}
+ExecStart=$JAVA_HOME/bin/java -jar {soap-ui-jar_name}
+ExecStop=/bin/kill -15 $MAINPID
+
+[Install]
+WantedBy=multi-user.target
